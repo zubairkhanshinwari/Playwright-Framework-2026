@@ -1,0 +1,20 @@
+{
+  "terminalUrl": "https://stageapp.propx.com/admin/setting/terminal",
+  "menu": {
+    "locations": "Locations",
+    "terminal": "Terminals"
+  },
+  "addTerminalButton": "Add Terminal",
+  "popupSelector": "#add_terminals",
+  "addressValue": "Baton Rouge, LA, USA",
+  "passwordValue": "123@aabc",
+  "selectors": {
+    "terminalName": "#destname",
+    "address": "#addressinputs",
+    "addressDropdown": ".pac-item",
+    "email": "input[name=\"email\"]",
+    "password": "input[name=\"password\"]",
+    "addTerminalSubmit": "#addterminalbtn",
+    "search": "#terminalstable_filter input"
+  }
+}

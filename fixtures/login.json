@@ -1,0 +1,11 @@
+{
+  "url": "https://stageapp.propx.com/login",
+  "dashboardUrl": "https://stageapp.propx.com/admin/dashboard",
+  "username": "admin@pd.com",
+  "password": "Pr)pperX@2020!?",
+  "selectors": {
+    "email": "#email",
+    "password": "#password",
+    "loginButton": "#btn-login"
+  }
+}
