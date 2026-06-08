@@ -3,6 +3,8 @@
   "dashboardUrl": "https://stageapp.propx.com/admin/dashboard",
   "username": "admin@pd.com",
   "password": "Pr)pperX@2020!?",
+  "username2": "testcompany@mailinator.com",
+  "password2": "test123",
   "selectors": {
     "email": "#email",
     "password": "#password",

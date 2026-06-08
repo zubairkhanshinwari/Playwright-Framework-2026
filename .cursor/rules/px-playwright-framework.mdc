@@ -1,0 +1,21 @@
+---
+description: Px-regression Playwright — 3 files per test, shared login in spec, random data in page
+alwaysApply: true
+---
+
+# Px-regression Playwright (always follow)
+
+Read and follow `.cursor/skills/px-playwright-framework/SKILL.md` for full detail.
+
+## Non-negotiable rules
+
+1. **Each new test case = exactly 3 files:** `fixtures/{feature}.json`, `pages/create{Feature}Page.ts`, `tests/create{Feature}.spec.ts`
+2. **Login in spec only** via `LoginPage` + `fixtures/login.json` — `login()` (admin) or `login2()` (company `/jobs`); never login inside page objects
+3. **Random/dynamic data in page object** (e.g. `Job-${Date.now()}`, `Terminal-${timestamp}`) — not in spec
+4. **All feature flow code** in page `async` methods; spec only calls those methods after login
+5. **Selectors and values** in `{feature}.json` — scope with `popupSelector` / `jobFormSelector` when IDs repeat
+6. **No extra files** per feature (no index.ts, no duplicate helpers, no second login json)
+
+Different user → change `login.json` only (`username2` / `login2()`).
+
+When unsure, match `createterminal.spec.ts` + `createJob.spec.ts` and their page/json files in this repo.

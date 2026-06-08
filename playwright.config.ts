@@ -1,5 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const { deviceScaleFactor: _deviceScaleFactor, viewport: _viewport, ...desktopChrome } =
+  devices['Desktop Chrome'];
+
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
@@ -9,11 +12,15 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
+    viewport: null,
+    launchOptions: {
+      args: ['--start-maximized'],
+    },
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...desktopChrome, viewport: null },
     },
   ],
 });

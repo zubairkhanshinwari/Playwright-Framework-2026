@@ -8,13 +8,29 @@
   "popupSelector": "#add_terminals",
   "addressValue": "Baton Rouge, LA, USA",
   "passwordValue": "123@aabc",
+
+  
+  "dataFormatValue": "JSON",
+  "netWeightValue": "5000",
+  "grossWeightValue": "4000",
+  "ticketNumberValue": "1293",
+  "unitValue": "Kg",
+
+
   "selectors": {
     "terminalName": "#destname",
     "address": "#addressinputs",
     "addressDropdown": ".pac-item",
     "email": "input[name=\"email\"]",
     "password": "input[name=\"password\"]",
+    "qrCodesCheckbox": "#received_is_qrcodes",
+    "dataFormat": "#integration-providers-QRcodes select[name=\"qr_code_type\"]",
+    "netWeight": "#netweight",
+    "grossWeight": "#grossweight",
+    "ticketNumber": "#ticketnumber",
+    "unit": "#add_terminals_unit",
     "addTerminalSubmit": "#addterminalbtn",
-    "search": "#terminalstable_filter input"
+    "search": "#terminalstable_filter input",
+    "terminalsTable": "#terminalstable"
   }
 }
