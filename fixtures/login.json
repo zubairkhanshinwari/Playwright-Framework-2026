@@ -1,10 +1,5 @@
 {
-  "url": "https://stageapp.propx.com/login",
-  "dashboardUrl": "https://stageapp.propx.com/admin/dashboard",
-  "username": "admin@example.com",
-  "password": "Password123!",
-  "username2": "companyuser@example.com",
-  "password2": "CompanyPass123!",
+  
   "selectors": {
     "email": "#email",
     "password": "#password",
