@@ -9,18 +9,23 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: process.env.CI ? [['github'], ['html']] : 'html',
   use: {
     trace: 'on-first-retry',
-    viewport: null,
-    launchOptions: {
-      args: ['--start-maximized'],
-    },
+    viewport: process.env.CI ? { width: 1280, height: 720 } : null,
+    launchOptions: process.env.CI
+      ? undefined
+      : {
+          args: ['--start-maximized'],
+        },
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...desktopChrome, viewport: null },
+      use: {
+        ...desktopChrome,
+        viewport: process.env.CI ? { width: 1280, height: 720 } : null,
+      },
     },
   ],
 });

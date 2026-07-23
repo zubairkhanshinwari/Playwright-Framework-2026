@@ -82,7 +82,6 @@ export class CreateJobPage {
     const nextButton = form.locator(selectors.nextButton);
     await nextButton.scrollIntoViewIfNeeded();
     await nextButton.click();
-    page.getbytestid
     await expect(nextButton).not.toContainText(/sending/i, { timeout: 120000 });
     await expect(this.jobModal().locator(this.data.rateSheetListSelector).first()).toBeVisible({
       timeout: 120000,
