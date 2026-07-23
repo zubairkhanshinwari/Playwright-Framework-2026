@@ -18,11 +18,7 @@ export class LoginPage {
     await this.page.waitForURL((u) => u.pathname.includes('/admin/dashboard'), { timeout: 60000 });
   }
 
-  /**
-   * @defination Company user login; lands on jobs (not admin dashboard)
-   * @createdon 2026-06-02
-   * @Author Sial
-   */
+  
   async login2() {
     const { url, username2, password2, selectors } = this.data;
     await this.page.context().clearCookies();
